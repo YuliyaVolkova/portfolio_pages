@@ -161,37 +161,39 @@
               </div>
             </div>
             <div class="l-main__slider">
-              <div class="c-slider">
-                <div class="c-slider__desc-fr">
+              <div class="c-slider" id="worksSlider">
+                <div class="c-slider__desc-fr" v-for="index in slides" v-if="index === active" :key="index">
                   <div class="c-slider__desc-header">
                     <svg class="svg_dash">
                       <use xlink:href="../assets/images/sprites/sprite.svg#dash">
                         <title>dash</title>
                       </use>
                     </svg>
-                    <h3 class="h-title-article">Сайт школы онлайн Образования</h3>
+                    <h3 class="h-title-article">{{dataArr[index-1].title}}</h3>
                     <svg class="svg_dash">
                       <use xlink:href="../assets/images/sprites/sprite.svg#dash">
                         <title>dash</title>
                       </use>
                     </svg>
                   </div>
-                  <div class="c-slider__desc-text"><span>HTMl , CSS, JAVASCRIPT</span></div><a class="c-button c-slider__desc-link" href="https://webmanshake.ru/" target="_blank">
+                  <div class="c-slider__desc-text"><span>{{dataArr[index-1].technologies}}</span></div><a class="c-button c-slider__desc-link" href="https://webmanshake.ru/" target="_blank">
                     <svg class="svg_link">
                       <use xlink:href="../assets/images/sprites/sprite.svg#link">
                         <title>link</title>
                       </use>
                     </svg><span class="c-button__text">Посмотреть сайт</span></a>
                 </div>
-                <div class="c-slider__main-fr"><img class="c-slider__main-img" alt="" src="https://yuliyavolkova.github.io/portfolio_pages/assets/images/content/work-1.png"></div>
+                <div class="c-slider__main-fr">
+                  <transition-group name="slide" mode="in-out" enter-class="slide-in" leave-class="slide-out" enter-active-class="animated slide-in-active" leave-active-class="animated slide-out-active" tag="div"><img class="c-slider__main-img" alt="" v-for="ind in slides" v-if="ind === active" :key="ind" :src="dataArr[ind-1].url"></transition-group>
+                </div>
                 <div class="c-slider__control-fr">
-                  <div class="c-slider__control-prev"><img class="c-slider__control-img" alt="" src="https://yuliyavolkova.github.io/portfolio_pages/assets/images/content/work-4.png"><a class="c-slider__control__link" href="#">
+                  <div class="c-slider__control-prev"><img class="c-slider__control-img" alt="" v-for="indx in slides" v-if="indx === prev" :key="indx" :src="dataArr[indx-1].url"><a class="c-slider__control__link" href="#" @click="move(-1)">
                       <svg class="svg_slider-arrow">
                         <use xlink:href="../assets/images/sprites/sprite.svg#portf_arrow_down">
                           <title>portf_arrow_down</title>
                         </use>
                       </svg></a></div>
-                  <div class="c-slider__control-next"><img class="c-slider__control-img" alt="" src="https://yuliyavolkova.github.io/portfolio_pages/assets/images/content/work-2.png"><a class="c-slider__control__link" href="#">
+                  <div class="c-slider__control-next"><img class="c-slider__control-img" alt="" v-for="count in slides" v-if="count === next" :key="count" :src="dataArr[count-1].url"><a class="c-slider__control__link" href="#" @click="move(1)">
                       <svg class="svg_slider-arrow">
                         <use xlink:href="../assets/images/sprites/sprite.svg#portf_arrow_up">
                           <title>portf_arrow_up</title>
