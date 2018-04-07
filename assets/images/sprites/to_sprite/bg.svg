@@ -1,7 +1,7 @@
 export default {
       id: "bg-usage",
       viewBox: "0 0 2022 360.368",
-      url: __webpack_public_path__ + "C:\\Users\\Yuliya\\webprojects\\portfolio\\src\\assets\\images\\sprites\\to_sprite\\bg.svg",
+      url: __webpack_public_path__ + "C:\\Users\\Yuliya\\webprojects\\portfolio_server_express\\src\\assets\\images\\sprites\\to_sprite\\bg.svg",
       toString: function () {
         return this.url;
       }

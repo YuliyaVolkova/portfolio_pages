@@ -33,34 +33,34 @@
           <div class="l-backface-container"></div>
           <div class="visually-hidden" id="faceBl" type="template/text">
             <div class="c-welcome">
-              <div class="c-welcome__img-wrap" style="background-image: url('./assets/images/content/photo.jpg'); background-repeat:no-repeat;"><img class="c-welcome__img visually-hidden" alt="" src="https://yuliyavolkova.github.io/portfolio_pages/assets/images/content/photo.jpg"></div>
+              <div class="c-welcome__img-wrap" style="background-image: url('../../assets/images/content/photo.jpg'); background-repeat:no-repeat;"><img class="c-welcome__img visually-hidden" alt="" src="https://yuliyavolkova.github.io/portfolio_pages/assets/images/content/photo.jpg"></div>
               <div class="c-welcome__content">
                 <h1 class="c-welcome__header">Yuliya Volkova</h1>
                 <h2 class="c-welcome__desc">Личный сайт WEB Разработчика</h2>
                 <ul class="c-welcome__social">
                   <li class="c-welcome__social-item"><a class="c-welcome__social-link" href="https://yuliyavolkova.github.io/portfolio_pages/pages/about.html" target="_blank">
                       <svg class="svg-use">
-                        <use xlink:href="./assets/images/sprites/sprite.svg#vk">
+                        <use xlink:href="../../assets/images/sprites/sprite.svg#vk">
                           <title>vk</title>
                         </use>
                       </svg></a></li>
                   <li class="c-welcome__social-item"><a class="c-welcome__social-link" href="https://yuliyavolkova.github.io/portfolio_pages/" target="_blank">
                       <svg class="svg-use">
-                        <use xlink:href="./assets/images/sprites/sprite.svg#github">
+                        <use xlink:href="../../assets/images/sprites/sprite.svg#github">
                           <title>github</title>
                         </use>
                       </svg></a></li>
                   <li class="c-welcome__social-item"><a class="c-welcome__social-link" href="https://yuliyavolkova.github.io/portfolio_pages/" target="_blank">
                       <svg class="svg-use">
-                        <use xlink:href="./assets/images/sprites/sprite.svg#in">
+                        <use xlink:href="../../assets/images/sprites/sprite.svg#in">
                           <title>in</title>
                         </use>
                       </svg></a></li>
                 </ul>
                 <ul class="c-welcome__nav">
-                  <li class="c-welcome__nav-item"><a class="c-welcome__nav-link" href="./pages/my_works.html">Мои работы</a></li>
-                  <li class="c-welcome__nav-item"><a class="c-welcome__nav-link" href="./pages/about.html">Обо мне</a></li>
-                  <li class="c-welcome__nav-item"><a class="c-welcome__nav-link" href="./pages/blog.html">Блог</a></li>
+                  <li class="c-welcome__nav-item"><a class="c-welcome__nav-link" href="./my_works.html">Мои работы</a></li>
+                  <li class="c-welcome__nav-item"><a class="c-welcome__nav-link" href="./about.html">Обо мне</a></li>
+                  <li class="c-welcome__nav-item"><a class="c-welcome__nav-link" href="./blog.html">Блог</a></li>
                 </ul>
               </div>
             </div>
@@ -69,13 +69,13 @@
             <div class="c-login-form">
               <div class="c-login-form__header">
                 <svg class="svg_dash">
-                  <use xlink:href="./assets/images/sprites/sprite.svg#dash">
+                  <use xlink:href="../../assets/images/sprites/sprite.svg#dash">
                     <title>dash</title>
                   </use>
                 </svg>
                 <h3 class="h-title-article">Авторизуйтесь</h3>
                 <svg class="svg_dash">
-                  <use xlink:href="./assets/images/sprites/sprite.svg#dash">
+                  <use xlink:href="../../assets/images/sprites/sprite.svg#dash">
                     <title>dash</title>
                   </use>
                 </svg>
@@ -85,22 +85,22 @@
                   <div class="c-form__row">
                     <label class="c-form__item"><span class="c-form__item-logo" :class="{'error': attemptSubmit &amp;&amp; wrongLogin}">
                         <svg class="svg_login">
-                          <use xlink:href="./assets/images/sprites/sprite.svg#login">
+                          <use xlink:href="../../assets/images/sprites/sprite.svg#login">
                             <title>login</title>
                           </use>
                         </svg></span>
-                      <input class="c-form__input" type="text" name="username" placeholder="Логин" v-model="login.value" :class="{'error': attemptSubmit &amp;&amp; wrongLogin}">
+                      <input class="c-form__input" type="text" name="username" autocomplete="username" placeholder="Логин" v-model="login.value" :class="{'error': attemptSubmit &amp;&amp; wrongLogin}">
                       <div class="validator-error" v-if="login.error">{{login.error}}</div>
                     </label>
                   </div>
                   <div class="c-form__row">
                     <label class="c-form__item"><span class="c-form__item-logo" :class="{'error': attemptSubmit &amp;&amp; wrongPassword}">
                         <svg class="svg_login">
-                          <use xlink:href="./assets/images/sprites/sprite.svg#password">
+                          <use xlink:href="../../assets/images/sprites/sprite.svg#password">
                             <title>password</title>
                           </use>
                         </svg></span>
-                      <input class="c-form__input" type="password" name="password" placeholder="Пароль" v-model="password.value" :class="{'error': attemptSubmit &amp;&amp; wrongPassword}">
+                      <input class="c-form__input" type="password" name="password" autocomplete="current-password" placeholder="Пароль" v-model="password.value" :class="{'error': attemptSubmit &amp;&amp; wrongPassword}">
                       <div class="validator-error" v-if="password.error">{{password.error}}</div>
                     </label>
                   </div>

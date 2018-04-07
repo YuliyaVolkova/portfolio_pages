@@ -1,2 +1,0 @@
-webpackJsonp([0],{11:function(n,o,t){n.exports=t(12)},12:function(n,o,t){"use strict";t(0),t(13);var e=t(1),u=function(n){return n&&n.__esModule?n:{default:n}}(e);console.log("my_works.js"),(0,u.default)()},13:function(n,o){}},[11]);
-//# sourceMappingURL=my_works.bundle.js.map
